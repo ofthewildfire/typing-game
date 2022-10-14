@@ -43,7 +43,7 @@ h1 {
     font-weight: bold;
 }
 
-.qoute {
+.quote {
     margin-bottom: 1rem;
     margin-left: calc(1rem + 2px);
     margin-right: calc(1rem + 2px);
@@ -52,7 +52,7 @@ h1 {
     font-family: 'Bad Script', cursive;
 }
 
-.qoute-type {
+.quote-type {
     background-color: transparent;
     border: 2px solid rgb(24, 232, 152);
     outline: none;
@@ -66,7 +66,7 @@ h1 {
     color: white;
 }
 
-.qoute-type:focus {
+.quote-type:focus {
     border-color: black;
 }
 
@@ -77,9 +77,10 @@ h1 {
     border: none;
     font-size: 1.25rem;
     font-weight: 700;
-    font-family: monospace;
+    font-family:'Major Mono Display', monospace;
     border-radius: 5px;
     text-align: center;
+    background-color:  rgb(166, 219, 199);
 }
 
 .start-btn:hover, 

@@ -1,4 +1,4 @@
-const qoutes = [
+const quotes = [
  "I can survive well enough on my own, if given the proper reading material.",
  "Life isn't easy, no matter where you are. You'll make choices you think are right, and then suffer for them.",
  "It would not take a monster to destroy a monster, but light, light to drive out darkness.",
@@ -15,8 +15,8 @@ const qoutes = [
  "Even when this world is a forgotten whisper of dust between the stars, I will love you.",
 ];
 
-const qoute = document.getElementById("qoute");
-const input = document.getElementById("qouteType");
+const quote = document.getElementById("quote");
+const input = document.getElementById("quoteType");
 const timer = document.getElementById("counter");
 let recordedTime = Date.now();
 const messageEl = document.getElementById("message-el");
@@ -26,17 +26,17 @@ document.getElementById("startBtn").addEventListener("click", resetDateTimer);
 
 function resetDateTimer() {
  recordedTime = new Date().getTime();
- messageEl.innerText = `You asked for a new qoute, previous timer was reset!`;
+ messageEl.innerText = `You asked for a new quote, previous timer was reset!`;
 }
 
 function render() {
- const currentIndex = Math.floor(Math.random() * qoutes.length);
- const currentQoute = qoutes[currentIndex];
- qoute.innerText = "";
- currentQoute.split("").forEach((character) => {
+ const currentIndex = Math.floor(Math.random() * quotes.length);
+ const currentQuote = quotes[currentIndex];
+ quote.innerText = "";
+ currentQuote.split("").forEach((character) => {
   const characterSpan = document.createElement("span");
   characterSpan.innerText = character;
-  qoute.appendChild(characterSpan);
+  quote.appendChild(characterSpan);
  });
 
  input.value = null;
@@ -46,10 +46,10 @@ function render() {
 function inputCheck() {
  recordedTime = new Date().getTime();
  input.addEventListener("input", () => {
-  const qouteArr = qoute.querySelectorAll("span");
+  const quoteArr = quote.querySelectorAll("span");
   const valueArr = input.value.split("");
   let correct = true;
-  qouteArr.forEach((item, index) => {
+  quoteArr.forEach((item, index) => {
    const character = valueArr[index];
    if (character == null) {
     item.classList.remove("correct");
